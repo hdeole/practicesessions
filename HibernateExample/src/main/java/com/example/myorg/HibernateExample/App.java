@@ -19,6 +19,7 @@ public class App
     public static void main( String[] args )
  {
 		System.out.println("Starting the Sample Hibernate App ..");
+		System.out.println("Starting the Sample Hibernate App ..");
 
 		Configuration config = new Configuration().configure();
 		Session session = config.buildSessionFactory().openSession();
