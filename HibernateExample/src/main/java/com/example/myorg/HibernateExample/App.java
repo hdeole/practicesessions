@@ -20,6 +20,8 @@ public class App
  {
 		System.out.println("Starting the Sample Hibernate App ..");
 		System.out.println("Starting the Sample Hibernate App ..");
+		System.out.println("Starting the Sample Hibernate App ..");
+		System.out.println("Hurrey GIT is working ..");
 
 		Configuration config = new Configuration().configure();
 		Session session = config.buildSessionFactory().openSession();
