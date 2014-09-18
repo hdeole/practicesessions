@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 @Table(name="AUTHOR")
 @Entity
@@ -26,7 +27,15 @@ public class Author implements Serializable {
 	private String lastName;
 	@OneToMany(mappedBy="author",cascade=CascadeType.ALL)	
 	private Set<Address> Addressess;
+	@Version
+	private long version;
 	
+	public long getVersion() {
+		return version;
+	}
+	public void setVersion(long version) {
+		this.version = version;
+	}
 	public long getAuthorId() {
 		return authorId;
 	}

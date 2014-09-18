@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Version;
 
 import org.pojomatic.Pojomatic;
 import org.pojomatic.annotations.AutoProperty;
@@ -35,7 +36,29 @@ public class Address implements Serializable {
 	private String zip;
 	@ManyToOne	
 	@JoinColumn(name="authorId")
-	private Author author;
+	private Author author;	
+	@ManyToOne
+	@JoinColumn(name="companyId")
+	private Company company;
+	@Version
+	private long version;
+
+	
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+
+	public long getVersion() {
+		return version;
+	}
+
+	public void setVersion(long version) {
+		this.version = version;
+	}
 
 	public Author getAuthor() {
 		return author;
