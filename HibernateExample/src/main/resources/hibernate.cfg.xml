@@ -18,6 +18,6 @@
         <property name="hibernate.connection.pool_size">2</property>
 	    <mapping class="com.myorg.example.entities.Address"/>
 	    <mapping class="com.myorg.example.entities.Author"/>
-<!-- 	    <mapping class="com.myorg.entities.Address"/> -->
+	    <mapping class="com.myorg.example.entities.Company"/>
 	</session-factory>
 </hibernate-configuration>
