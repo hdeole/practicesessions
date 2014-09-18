@@ -9,6 +9,7 @@ import org.hibernate.criterion.Restrictions;
 
 import com.myorg.example.entities.Address;
 import com.myorg.example.entities.Author;
+import com.myorg.example.entities.Company;
 
 /**
  * Hello world!
@@ -48,8 +49,20 @@ public class App
 		author.setLastName("Grisham");
 		author.setAddressess(addressSet);
 		
+		Company myCompany = new Company();
+		myCompany.setAddresses(addressSet);
+		myCompany.setCompanyName("Overstock");
+		myCompany.setRevenue(new Double(12000000));
+		
+		
+		
+		
 		address1.setAuthor(author);
-		address.setAuthor(author);
+		//address1.setCompany(myCompany);
+		
+		//address.setAuthor(author);
+		address.setCompany(myCompany);
+		session.persist(myCompany);
 		
 		session.persist(author);
 //		session.persist(address);
